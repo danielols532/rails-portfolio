@@ -53,3 +53,6 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "rubocop-performance", "~> 1.24"
+gem "rubocop-rails", "~> 2.30"
