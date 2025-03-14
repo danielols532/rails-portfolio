@@ -1,0 +1,92 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* Modern clean font */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    /* Dark semi-transparent background */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1rem 0;
+}
+
+nav {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #4da8da;
+    /* Light blue accent */
+}
+
+/* MAIN CONTENT */
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 5rem;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1e1e 50%, #0077b6 50%);
+    color: white;
+}
+
+/* TEXT STYLING */
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f4f4f4;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    color: #d1d1d1;
+    max-width: 500px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #111;
+    color: #bbb;
+    font-size: 0.9rem;
+}
