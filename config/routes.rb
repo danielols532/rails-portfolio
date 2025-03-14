@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   root "pages#welcome"
+  get "/portfolio", to: "pages#portfolio"
+  get "/about", to: "pages#about"
+  get "/skills", to: "pages#skills"
+  get "/contact", to: "pages#contact"
 end

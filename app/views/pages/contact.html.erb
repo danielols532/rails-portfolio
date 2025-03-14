@@ -1,0 +1,37 @@
+<main>
+    <section id="contact" class="container py-5">
+        <h1 class="text-center mb-4">Contact Me</h1>
+        <div class="row text-center">
+            <!-- Social Links -->
+            <div class="col-md-3 mb-4">
+                <%= link_to "https://github.com/danielols532", class: "social-icon" do %>
+                    <%= image_tag "github.png", alt: "GitHub", class: "img-fluid" %>
+                    <h5>GitHub</h5>
+                <% end %>
+            </div>
+            <div class="col-md-3 mb-4">
+                <%= link_to "https://www.linkedin.com/in/danielolsson-sysdev/", class: "social-icon" do %>
+                    <%= image_tag "linkedin.png", alt: "LinkedIn", class: "img-fluid" %>
+                    <h5>LinkedIn</h5>
+                <% end %>
+            </div>
+            <div class="col-md-3 mb-4">
+                <%= link_to "mailto:danielolsson.danielolsson@gmail.com", class: "social-icon" do %>
+                    <%= image_tag "email.png", alt: "Email", class: "img-fluid" %>
+                    <h5>Email</h5>
+                    <p>danielolsson.danielolsson@gmail.com</p>
+                <% end %>
+            </div>
+            <div class="col-md-3 mb-4">
+                <%= link_to "", class: "social-icon" do %>
+                    <%= image_tag "telephone-symbol-button.png", alt: "Phone", class: "img-fluid" %>
+                    <h5>Phone</h5>
+                    <p>+46739144942</p>
+                <% end %>
+            </div>
+        </div>
+        <div class="text-center bottom-text">
+            <p>Feel free to reach out if you'd like to collaborate or just have a chat!</p>
+        </div>
+    </section>
+</main>

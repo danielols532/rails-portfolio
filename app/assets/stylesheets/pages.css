@@ -1,0 +1,438 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #121212;
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    background: rgba(20, 20, 20, 0.9);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* NAV CONTAINER */
+.nav-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo span {
+    color: #4da8da;
+    font-size: 2rem;
+}
+
+/* NAV LINKS */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+}
+
+/* Underline effect on hover */
+.nav-links a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #4da8da;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links a:hover {
+    color: #4da8da;
+    transform: translateY(-2px);
+}
+
+/* CONTACT BUTTON */
+.contact-btn a {
+    background: #4da8da;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-btn a:hover {
+    background: #38a1c4;
+    box-shadow: 0 4px 10px rgba(77, 168, 218, 0.5);
+}
+
+/* MOBILE MENU TOGGLE */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(20, 20, 20, 0.95);
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    padding: 1rem 0;
+    z-index: 99;
+}
+
+.mobile-menu li {
+    list-style: none;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* HERO SECTION */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 6rem 5rem;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1e1e 50%, #0077b6 50%);
+    color: white;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #d1d1d1;
+    max-width: 500px;
+    transition: all 0.3s ease;
+}
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+
+    .contact-btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        max-width: 95%;
+    }
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #111;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+/* PROJECTS SECTION */
+#projects {
+    background-color: #1e1e1e;
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    /* Adds shadow to stand out more */
+    border-radius: 10px;
+    /* Slight rounding for the entire section */
+}
+
+#projects .card {
+    background: #222;
+    border: none;
+    border-radius: 10px;
+}
+
+#projects .card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #4da8da;
+}
+
+#projects .card-text {
+    color: #bbb;
+}
+
+#projects .btn {
+    background-color: #4da8da;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#projects .btn:hover {
+    background-color: #38a1c4;
+}
+
+/* SKILLS SECTION */
+#skills {
+    background-color: #1e1e1e;
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    /* Adds shadow to stand out more */
+    border-radius: 10px;
+    /* Slight rounding for the entire section */
+}
+
+#skills .skill-icon {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#skills .skill-icon:hover {
+    transform: translateY(-5px);
+}
+
+#skills img {
+    width: 60px;
+    height: 60px;
+}
+
+#skills h5 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    color: #4da8da;
+}
+
+/* ABOUT SECTION */
+#about {
+    background-color: #1e1e1e;
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    /* Adds shadow to stand out more */
+    border-radius: 10px;
+    /* Slight rounding for the entire section */
+}
+
+/* About Box */
+#about .container {
+    background: rgba(0, 0, 0, 0.8);
+    /* Darker background inside the box */
+    padding: 2rem;
+    border-radius: 8px;
+    /* Slight rounding for the inner box */
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+    /* Adds a stronger shadow inside */
+}
+
+/* Image in About Section */
+.rounded-rect {
+    border-radius: 12px;
+    /* Slightly rounded corners for the image */
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    /* Shadow around the image to make it stand out */
+}
+
+/* Text inside About Section */
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #bbb;
+    margin-bottom: 1.5rem;
+    /* Add some space between the paragraphs */
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    color: #4da8da;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    /* Space between the title and content */
+}
+
+
+/* CONTACT SECTION */
+#contact {
+    background-color: #1e1e1e;
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+/* Social Icon Container */
+#contact .social-icon {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    background-color: #fff;
+    /* White background */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    /* Enable flexbox for better alignment */
+    flex-direction: column;
+    /* Align content vertically */
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
+    height: 100%;
+    /* Allow it to adjust to content */
+}
+
+/* Icon */
+#contact img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    /* Add space between the icon and text */
+}
+
+/* Heading */
+#contact h5 {
+    margin-top: 0;
+    /* Remove any top margin */
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4da8da;
+    text-align: center;
+    /* Center the text */
+}
+
+
+/* Hover effect */
+#contact .social-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    /* Slightly stronger shadow on hover */
+}
+
+#contact img {
+    width: 50px;
+    height: 50px;
+}
+
+#contact h5 {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #4da8da;
+}
+
+#contact p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4da8da
+}
+
+/* Centering the text inside the final div */
+#contact .bottom-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Ensure the text itself is centered */
+    margin-top: 2rem;
+    /* Space between the icons and the text */
+}
+
+/* Adjust the paragraph */
+#contact .bottom-text p {
+    max-width: 600px;
+    /* Optional: Set a max width to avoid text stretching too wide */
+    color: #d1d1d1;
+    /* Slightly lighter color for the paragraph */
+    font-size: 1.1rem;
+    /* Adjust font size if necessary */
+    line-height: 1.6;
+    /* Improve readability */
+}
