@@ -54,5 +54,5 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "rubocop-performance", "~> 1.24"
+gem "rubocop-performance", "~> 1.25"
 gem "rubocop-rails", "~> 2.30"
