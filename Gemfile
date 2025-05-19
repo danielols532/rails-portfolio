@@ -55,4 +55,4 @@ group :test do
 end
 
 gem "rubocop-performance", "~> 1.24"
-gem "rubocop-rails", "~> 2.30"
+gem "rubocop-rails", "~> 2.32"
